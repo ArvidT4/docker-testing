@@ -1,0 +1,12 @@
+version: '3' # Docker version
+services:
+  www:
+    image: php:apache
+    volumes:
+      - "./:/var/www/html" # Sync project dir with container web dir
+    ports:
+      - 80:80
+      - 443:443 # future ssl traffic
+  db:
+  image: mysql:latest
+  
